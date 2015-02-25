@@ -14,7 +14,12 @@ function(x) {
   names(y) = names(x)
   y}
 
-# sample
+sample =
+  function()
+    x[base::sample(x = length(x), size = size, replace = replace, prob = prob)]
+
+formals(sample) = formals(base::sample)
+
 #
 # [drop]
 #
