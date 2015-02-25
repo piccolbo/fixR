@@ -20,8 +20,11 @@ sample =
 
 formals(sample) = formals(base::sample)
 
-#
-# [drop]
+`[.data.frame` =
+  function (x, i, j)
+    base::`[.data.frame`(x, i, j, drop = FALSE)
+
+
 #
 #
 # as.integer.factor

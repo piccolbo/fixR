@@ -13,3 +13,10 @@ test(
   function(
     n = rinteger(c(min = 2), size = ~1))
     expect("error", sample(n,n)))
+
+test(
+  function(
+    x = rdata.frame(nrow = c(min = 1), ncol = c(min = 1)),
+    i = rsample(1:nrow(x), size = c(min = 1)),
+    j = rsample(1:ncol(x), size = ~1))
+  is.data.frame(x[i, j]))
