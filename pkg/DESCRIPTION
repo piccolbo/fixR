@@ -1,0 +1,9 @@
+Package: fixR
+Type: Package
+Title: Fix what R does wrong
+Version: 1.0
+Date: 2015-02-25
+Author: Antonio Piccolboni <antonio@piccolboni.info>
+Maintainer: Antonio Piccolboni <antonio@piccolboni.info>
+Description: Instead of writing books about how bad R is or sending useless bug reports to an indifferent core, write a package to fix them
+License: Apache 2.0

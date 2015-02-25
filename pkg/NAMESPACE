@@ -1,0 +1,4 @@
+export(as.list.Date)
+export(as.list.factor)
+S3method(as.list, Date)
+S3method(as.list, factor)
