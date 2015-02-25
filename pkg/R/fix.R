@@ -24,10 +24,12 @@ formals(sample) = formals(base::sample)
   function (x, i, j)
     base::`[.data.frame`(x, i, j, drop = FALSE)
 
+as.integer.factor =
+  function(x)
+    as.integer(as.character(x))
 
-#
-#
-# as.integer.factor
+
+
 #
 # ifelse(factor)
 #

@@ -20,3 +20,8 @@ test(
     i = rsample(1:nrow(x), size = c(min = 1)),
     j = rsample(1:ncol(x), size = ~1))
   is.data.frame(x[i, j]))
+
+
+test(
+  function(x = rinteger())
+    identical(x, as.integer(as.factor(x))))
