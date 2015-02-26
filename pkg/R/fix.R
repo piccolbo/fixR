@@ -41,3 +41,12 @@ c =
       as.factor(do.call(base::c, lapply(list(...), as.character)))
     else
       base::c(..., recursive = recursive)}
+
+split.Date =
+  function(x, f, drop = FALSE, ...) {
+    yy = base::split.Date(x, f, drop = drop)
+    delta = as.double(x) - as.integer(x)
+    dd = base::split(delta, f, drop = drop)
+    mapply(function(y, d) y + d, yy, dd, SIMPLIFY = FALSE)}
+
+#mapply

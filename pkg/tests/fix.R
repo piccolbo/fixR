@@ -33,3 +33,8 @@ test(
 test(
   function(x = rfactor(), y = rfactor())
     is.factor(c(x, y)))
+
+test(
+  function(x = rdouble()) {
+    dates = as.Date(x, origin = "1054-01-04")
+    all( dates == unsplit(split(dates, 1), 1))})
