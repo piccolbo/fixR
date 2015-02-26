@@ -25,3 +25,11 @@ test(
 test(
   function(x = rinteger())
     identical(x, as.integer(as.factor(x))))
+
+test(
+  function(x = rfactor(), b = rlogical(size = ~length(x)))
+    is.factor(ifelse(b, x, x)))
+
+test(
+  function(x = rfactor(), y = rfactor())
+    is.factor(c(x, y)))

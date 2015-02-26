@@ -28,9 +28,16 @@ as.integer.factor =
   function(x)
     as.integer(as.character(x))
 
+ifelse =
+  function(test, yes, no){
+    if(is.factor(yes) && is.factor(no))
+      as.factor(base::ifelse(test, as.character(yes), as.character(no)))
+    else
+      base::ifelse(test, yes, no)}
 
-
-#
-# ifelse(factor)
-#
-# c(factor)
+c =
+  function(..., recursive = FALSE) {
+    if(identical(unique(sapply(list(...), class)), "factor"))
+      as.factor(do.call(base::c, lapply(list(...), as.character)))
+    else
+      base::c(..., recursive = recursive)}
